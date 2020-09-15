@@ -5,7 +5,7 @@ public class Encrypter
 {
 
 
-    public static String encrypt(String code)
+    public String encrypt(String code)
     {
 
         int num;
