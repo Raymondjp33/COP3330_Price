@@ -4,7 +4,7 @@ public class Decrypter
 {
 
 
-    public static String decrypt(String code)
+    public String decrypt(String code)
     {
         int i, num;
         int[] codeNew = new int [4];
