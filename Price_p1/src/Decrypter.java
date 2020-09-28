@@ -4,13 +4,23 @@ public class Decrypter
 {
 
 
-    public String decrypt(String code)
+    public static String decrypt(String code)
     {
         int i, num;
         int[] codeNew = new int [4];
         String newCode;
 
         num = Integer.parseInt(code);
+        codeNew = number_descrambler(num);
+        newCode = Arrays.toString(codeNew);
+
+        return newCode;
+
+    }
+    public static int[] number_descrambler(int num)
+    {
+        int codeNew[] = new int[4];
+        int i;
 
         codeNew[0] = (num/10)%10;
         codeNew[1] = num%10;
@@ -29,9 +39,6 @@ public class Decrypter
             }
         }
 
-        newCode = Arrays.toString(codeNew);
-
-        return newCode;
-
+        return codeNew;
     }
 }
